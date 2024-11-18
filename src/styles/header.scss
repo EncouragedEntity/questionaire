@@ -1,0 +1,18 @@
+@import "vars.scss";
+.header {
+  background-color: $primary-color;
+  width: 100%;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+.logo__link {
+  text-decoration: none;
+  color: $black-color;
+  :hover {
+    color: $gray-color;
+  }
+}
