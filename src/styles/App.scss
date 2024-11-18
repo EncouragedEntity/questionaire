@@ -1,0 +1,319 @@
+@import "./vars";
+body {
+  font-family: "Outfit-Regular";
+}
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+//formInput
+
+.form-control {
+  border: none;
+  border-bottom: rgba(230, 230, 230, 1) 2px solid;
+  border-radius: 0;
+  padding: 12px 60px;
+  min-width: 305px;
+  text-align: center;
+  color: $black-color;
+  font-size: 16px;
+  background-color: inherit;
+  box-shadow: none !important;
+}
+.form-control:focus {
+  border-bottom: $button-color 2px solid;
+  color: $black-color;
+  background-color: inherit;
+}
+
+.form-control.invalid {
+  border-bottom: rgba(199, 90, 136, 1) 2px solid;
+  color: rgba(199, 90, 136, 1);
+}
+.form-control::placeholder {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.form__textarea {
+  color: $gray-color;
+  resize: none;
+  overflow: hidden;
+  text-align: start;
+}
+.form-floating > label {
+  color: $gray-color;
+}
+
+.form-floating > .form-control:not(:placeholder-shown) ~ label::after,
+.form-floating > .form-control:focus ~ label::after {
+  background-color: $secondary-color;
+}
+//mainBtns
+
+.main__btn.large {
+  background-color: $button-color;
+  box-shadow: 0 40px 40px 0 rgba(101, 162, 187, 0.2);
+  padding: 12px 54px;
+  color: $primary-color;
+  border: none;
+  border-radius: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  &:hover {
+    background: linear-gradient(270deg, #5c9431 0%, #63a2bc 100%);
+    box-shadow: none;
+    transition: all 0.5s ease-out;
+  }
+}
+.main__btn.small {
+  background-color: $button-color;
+  box-shadow: 0 40px 40px 0 rgba(101, 162, 187, 0.2);
+  padding: 12px 54px;
+  color: $primary-color;
+  font-size: 16px;
+  line-height: 1.5;
+  &:hover {
+    background: linear-gradient(270deg, #5c9431 0%, #63a2bc 100%);
+    box-shadow: none;
+    transition: all 0.5s ease-out;
+  }
+}
+
+.main__btn.disable {
+  box-shadow: none;
+  color: rgba(255, 255, 255, 0.4);
+}
+.prev__arrow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: absolute;
+  left: 0;
+  transform: translateY(-12px);
+  font-size: 15px;
+  :hover {
+    color: $gray-color;
+  }
+}
+.prev__arrow img {
+  transition: transform 0.3s ease;
+}
+.prev__arrow:hover img {
+  transform: translateX(-10px);
+}
+
+//dropDown
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-wrap: wrap;
+  --bs-btn-bg: $secondary-color;
+  --bs-btn-color: $black-color;
+  --bs-btn-border-color: none;
+  --bs-border-radius: none;
+  --bs-btn-hover-bg: $secondary-color;
+  --bs-btn-hover-color: none;
+  --bs-btn-active-bg: none;
+  --bs-btn-active-color: none;
+
+  .dropdown-menu {
+    min-width: 100%;
+    text-wrap: wrap;
+    border: none;
+    padding: 0;
+  }
+}
+
+.dropdown__item {
+  padding: 14px;
+  text-decoration: none;
+
+  border-bottom: 1px solid $secondary-color;
+  --bs-dropdown-link-active-bg: none;
+  --bs-dropdown-link-active-color: $black-color;
+}
+@media (max-width: 425px) {
+  .dropdown__item {
+    text-wrap: wrap;
+  }
+}
+
+//progressBar
+.counter {
+  color: $gray-color;
+  font-size: 13px;
+  padding: 64px 0 32px;
+}
+.progressbar {
+  background-color: rgba(242, 242, 242, 1);
+  max-width: 40rem;
+  height: 8px;
+  margin: 0 auto;
+}
+.progreesbar__inner {
+  background-color: rgba(255, 208, 34, 1);
+  height: 8px;
+  transition: all ease-in-out 0.5s;
+}
+
+//checkBox
+
+.checkbox {
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  gap: 16px;
+  .btn-check:checked + .btn {
+    background-color: $secondary-color;
+    border-color: $button-color;
+    color: $button-color;
+    border-radius: none;
+    --bs-btn-border-color: transparent;
+    --bs-btn-border-radius: none;
+    --bs-btn-border-width: 2px;
+    padding: 12px 16px;
+  }
+  .btn-primary {
+    --bs-btn-border-color: transparent;
+    --bs-btn-border-width: 2px;
+    --bs-btn-border-radius: none;
+    background-color: $primary-color;
+    padding: 12px 16px;
+  }
+}
+
+//radioButtons
+
+.radiobutton__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 32px;
+  .btn-group {
+    gap: 16px;
+  }
+}
+
+.radio__buttons {
+  background-color: $primary-color;
+  padding: 12px 16px;
+  border-radius: 0;
+  color: $black-color;
+  border: none;
+  line-height: 1.85;
+}
+.radio__buttons-home {
+  background-color: $secondary-color;
+  padding: 12px 16px;
+  border-radius: 0;
+  color: $black-color;
+  border: none;
+  line-height: 1.85;
+}
+
+.btn-check:checked + .btn {
+  background-color: $black-color;
+}
+.btn {
+  --bs-btn-bg: $secondary-color;
+  --bs-btn-color: $black-color;
+}
+
+// datePicker
+
+.calendar {
+  font-family: "Outfit-Regular";
+  font-size: 13px;
+  border: none;
+  border-radius: 0;
+  padding: 20px;
+}
+.react-datepicker__header {
+  background-color: $primary-color;
+  border: none;
+}
+.react-datepicker__day--selected {
+  background-color: $button-color;
+  border-radius: 0;
+}
+.react-datepicker__day--selected:hover {
+  background-color: $button-color;
+  border-radius: 0;
+}
+.react-datepicker__day--keyboard-selected {
+  background-color: $button-color;
+  border-radius: 0;
+  color: $primary-color;
+}
+.react-datepicker__day {
+  margin: 0.4rem;
+  width: 1.9rem;
+  line-height: 1.9rem;
+}
+
+.react-datepicker__day:hover {
+  border-radius: 0;
+}
+.react-datepicker__day-name {
+  color: $gray-color;
+  margin: 0.4rem;
+  width: 1.9rem;
+  line-height: 1.9rem;
+}
+.react-datepicker__day-names {
+  margin-bottom: -10px;
+}
+.react-datepicker__week {
+  padding: 4px;
+}
+.react-datepicker__current-month {
+  padding: 14px;
+  font-size: 16px;
+}
+.react-datepicker__navigation {
+  top: 36px;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: #000;
+  border-width: 2px 2px 0px 0;
+}
+
+.react-datepicker__navigation--next {
+  right: 28px;
+}
+.react-datepicker__navigation--previous {
+  left: 28px;
+}
+.react-datepicker__navigation--years-upcoming {
+  display: none;
+}
+.react-datepicker__navigation--years-previous {
+  display: none;
+}
+.react-datepicker__year-dropdown {
+  background-color: $secondary-color;
+  border: none;
+  border-radius: 0;
+}
+.react-datepicker__header__dropdown {
+  padding: 6px;
+  background-color: $secondary-color;
+  margin: 0 24px;
+}
+.react-datepicker__year-option--selected {
+  display: none;
+}
+.react-datepicker__year-option--selected_year {
+  color: $primary-color;
+  background-color: $button-color;
+}
+
+.react-datepicker__year-option--selected_year:hover {
+  background-color: $button-color;
+}
+.react-datepicker__year-option {
+  line-height: 30px;
+}

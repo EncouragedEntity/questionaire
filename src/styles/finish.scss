@@ -1,0 +1,60 @@
+@import "vars.scss";
+.finish__wrapper {
+  background-color: $secondary-color;
+}
+
+.finish__logo {
+  flex: 1 1 auto;
+  padding-top: 64px;
+}
+.finish__main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.finish__main {
+  padding: 44px 32px;
+  background-color: $primary-color;
+  text-align: center;
+  h3 {
+    color: $black-color;
+    font-size: 13px;
+  }
+}
+
+.finish__label {
+  width: 26px;
+  height: 26px;
+  span {
+    cursor: pointer;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid $black-color;
+  }
+
+  .finish__label.span.checked {
+    border: none;
+  }
+}
+.checkbox__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding-top: 160px;
+}
+.finish__checkbox {
+  display: none;
+}
+.finish__checbox-icon {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  transform: translate(-9px, -9px);
+}
+.checkbox__text {
+  color: $black-color;
+}

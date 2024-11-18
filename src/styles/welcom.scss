@@ -1,0 +1,39 @@
+@import "vars.scss";
+
+.welcome__page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1 0 auto;
+  min-height: 100vh;
+}
+
+.logo {
+  display: block;
+  padding: 64px 0 32px;
+}
+.welcome__text {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  font-size: 13px;
+  padding: 32px;
+  max-width: 40rem;
+  line-height: 1.85;
+  background-color: $secondary-color;
+  p {
+    display: inline-block;
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.welcome__info {
+  color: rgba(84, 97, 108, 1);
+  font-size: 13px;
+  padding: 32px;
+  line-height: 1.85;
+}
